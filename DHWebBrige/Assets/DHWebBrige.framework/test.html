@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+</head>
+<style>
+    body {
+        background-color: red;
+        width: 100%;
+        height: 100%;
+    }
+    .player {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+<body>
+    <input type="button" value="openPage" onclick="openPage()">
+    <input type="button" value="closePage" onclick="closePage()">
+    <input type="button" value="closeFloat" onclick="closeFloat()">
+    <input type="button" value="toPage" onclick="toPage()">
+    <input type="button" value="setVideolnfo" onclick="setVideolnfo()">
+    <video id="player" controls playsinline webkit-playsinline>
+        <source type="video/mp4" src="https://obs-test-bj.obs.cn-north-4.myhuaweicloud.com/_transcode/66 (1).mp4"/>
+    </video>
+</body>
+<script>
+    function openPage() {
+        // iOS 交互
+        if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.openPage) {
+            window.webkit.messageHandlers.openPage.postMessage('');
+        } else {
+            // Android 交互
+            if (window.android && window.android.openPage) {
+                window.android.openPage('openPage');
+            } else {
+                console.log('No handler found for openPage');
+            }
+        }
+    }
+    function closePage() {
+        // iOS 交互
+        if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.closePage) {
+            window.webkit.messageHandlers.closePage.postMessage(1);
+        } else {
+            // Android 交互
+            if (window.android && window.android.closePage) {
+                window.android.closePage('closePage');
+            } else {
+                console.log('No handler found for closePage');
+            }
+        }
+    }
+    function closeFloat() {
+        // iOS 交互
+        if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.closeFloat) {
+            window.webkit.messageHandlers.closeFloat.postMessage(1);
+        } else {
+            // Android 交互
+            if (window.android && window.android.closeFloat) {
+                window.android.closeFloat('closeFloat');
+            } else {
+                console.log('No handler found for closeFloat');
+            }
+        }
+    }
+    function toPage() {
+        // iOS 交互
+        if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.toPage) {
+            window.webkit.messageHandlers.toPage.postMessage('https://www.baidu.com');
+        } else {
+            // Android 交互
+            if (window.android && window.android.toPage) {
+                window.android.toPage('toPage');
+            } else {
+                console.log('No handler found for toPage');
+            }
+        }
+    }
+    function setVideoInfo() {
+        const info = {
+            mobileVideoHeight: 112,
+            mobileVideoWidth: 200,
+            pluginLocationMobile: 'left',
+            pluginLocationMobileHeight: 56,
+            pluginLocationMobileWidth: 8
+        }
+        console.log(JSON.stringify(info));
+        // iOS 交互
+        if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.toPage) {
+            window.webkit.messageHandlers.setVideoInfo.postMessage(JSON.stringify(info));
+        } else {
+            // Android 交互
+            if (window.android && window.android.setVideoInfo) {
+                window.android.setVideoInfo(JSON.stringify(info));
+            } else {
+                console.log('No handler found for setVideoInfo');
+            }
+        }
+    }
+</script>
+</html>

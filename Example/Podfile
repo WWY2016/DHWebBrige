@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '15.0'
+
+target 'DHWebBrige_Example' do
+  pod 'DHWebBrige', :path => '../'
+
+  target 'DHWebBrige_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

@@ -1,0 +1,6 @@
+framework module DHWebBrige {
+  umbrella header "DHWebBrige-umbrella.h"
+
+  export *
+  module * { export * }
+}
