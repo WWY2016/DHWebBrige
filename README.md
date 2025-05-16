@@ -22,7 +22,7 @@ pod 'DHWebBrige'
 
 ## Author
 
-houdonghui, houdonghui@yhbj.com
+houdonghui
 
 ## License
 
