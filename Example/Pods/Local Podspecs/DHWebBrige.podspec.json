@@ -2,22 +2,21 @@
   "name": "DHWebBrige",
   "version": "0.0.1",
   "summary": "A short description of DHWebBrige.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/WWY2016/DHWebBrige.git",
+  "description": "TODO: DHWebBrige.",
+  "homepage": "https://github.com/houDongHui/DHWebBrige.git",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "dh": "dh"
+    "915529889@qq.com": "915529889@qq.com"
   },
   "source": {
-    "git": "https://github.com/WWY2016/DHWebBrige.git",
+    "git": "https://github.com/houDongHui/DHWebBrige.git",
     "tag": "0.0.1"
   },
   "platforms": {
     "ios": "15.0"
   },
-  "source_files": "DHWebBrige/Classes/**/*",
-  "vendored_frameworks": "DHWebBrigeKit/Assets/*.framework"
+  "vendored_frameworks": "DHWebBrige/Assets/*.framework"
 }

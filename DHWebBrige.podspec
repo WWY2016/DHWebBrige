@@ -18,20 +18,20 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+TODO: DHWebBrige.
                        DESC
 
   s.homepage         = 'https://github.com/WWY2016/DHWebBrige.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'dh' => 'dh' }
+  s.author           = { '915529889@qq.com' => '915529889@qq.com' }
   s.source           = { :git => 'https://github.com/WWY2016/DHWebBrige.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '15.0'
 
-  s.source_files = 'DHWebBrige/Classes/**/*'
-  s.vendored_frameworks = 'DHWebBrigeKit/Assets/*.framework'
+#  s.source_files = 'DHWebBrige/Classes/**/*'
+  s.vendored_frameworks = 'DHWebBrige/Assets/*.framework'
   
   # s.resource_bundles = {
   #   'DHWebBrige' => ['DHWebBrige/Assets/*.png']
